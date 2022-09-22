@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Koalla</title>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <!-- Css -->
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/Bootstrap/bootstrap.min.css">
+        <!-- animate css -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <!-- Custom Css -->
+        <link rel="stylesheet" href="css/Custom/style.css">
+        <script src="https://kit.fontawesome.com/d06050b33e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container-fluid h-100 p-0">
+            <div class="row h-100 d-flex m-0 p-0">
+                <!-- Side Bar -->
+                <div class="col-12 col-md-2 col-xxl-1 p-0 navbar py-2 py-md-0">
+                    <nav class="navbar container-fluid h-100 flex-column justify-content-start gap-5">
+                        <!-- Logo -->
+                        <div class="row px-3 m-0">
+                            <div class="logo col-6 col-sm-4 col-md-12 d-flex align-items-cente">
+                                <a href="#" class="d-flex">
+                                    <img src="images/logo.png" alt="logo" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-8 d-flex justify-content-end align-items-center d-md-none">
+                                <div class="mobile-menu-button d-flex align-items-center">
+                                    <button class="btn">
+                                        <i class="fa-solid fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Menu -->
+                        <div class="row menu w-100 d-none d-md-flex ">
+                            <div class="col-12 d-flex flex-column gap-1 p-0">
+                                <div class="px-3">
+                                    <h4 class="text-light">MENU</h4>
+                                </div>
+                                <div class="d-flex nav-link-wrapper w-100 justify-content-center text-truncate">
+                                    <a href="#" class="nav-link d-flex align-items-baseline gap-2"><i class="fa-solid fa-house"></i><span class="text-truncate">Ana Sayfa</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- general -->
+                        <div class="row general w-100 d-none d-md-flex">
+                            <div class="col-12  d-flex flex-column gap-1 p-0">
+                                <div class="px-3">
+                                    <h4 class="text-light">Genel</h4>
+                                </div>
+                                <div class="d-flex nav-link-wrapper w-100 justify-content-center">
+                                    <a href="#" class="nav-link d-flex align-items-baseline gap-2"><i class="fa-regular fa-circle-question"></i><span>Yardım</span></a>
+                                </div>
+                                <div class="d-flex nav-link-wrapper w-100 justify-content-center">
+                                    <a href="#" class="nav-link d-flex align-items-baseline gap-2"><i class="fa-solid fa-gear"></i><span>Ayarlar</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-12 col-md-10 col-xxl-11 main-wrapper p-0 overflow-scroll ">
+                    <!-- Main content -->
+                    <main class="main-content container-fluid p-0 py-3 m-0 ">
+                        <div class="row h-100 p-0 m-0">
+                            <div class="col-12 d-flex flex-column gap-4 px-3">
+                                <!-- Search Bar -->
+                                <div class="row">
+                                    <div class="search-bar gap-4">
+                                        <input type="text" id="searchBar" placeholder="Film ara" class="w-100 p-2 px-3">
+                                        <button class="btn"><i class="fa-solid fa-magnifying-glass d-flex justify-content-center align-items-center"></i></button>
+                                    </div>
+                                </div>
+
+                                <!-- Slider -->
+                                <div class="row">
+                                    <div class="carousel-wrapper">
+                                        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                              <div class="carousel-item active">
+                                                <div class="slider-item d-flex justify-content-center align-items-center py-3 px-5">
+                                                    <div class="col-4 d-flex justify-content-end ps-4">
+                                                        <img src="images/movie-1.jpg" id="slider-item-image" class="img-fluid rounded">
+                                                    </div>
+                                                    <div class="col-8 pe-5 px-4  d-flex gap-md-2 gap-1 flex-column">
+                                                        <div>
+                                                            <h3 class="text-light text-truncate" id="movie-title">Movie-Title</h3>
+                                                        </div>
+                                                        <div class="d-flex gap-3">
+                                                            <span class="text-light text-truncate" id="movie-year">movie-year</span>
+                                                            <span class="text-light text-truncate" id="movie-time">movie-time</span>
+                                                            <span class="text-light text-truncate" id="movie-rate">movie-rate</span>
+                                                        </div>
+                                                        <div>
+                                                            <p id="movie-subtitle">
+                                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae voluptatum sunt aperiam cum, omnis, nostrum id beatae asperiores temporibus, veritatis expedita ea repellat? Iste, in? Quidem eius odio ad dignissimos!
+                                                            </p>
+                                                        </div>
+                                                        <div class="watch-button-wrapper">
+                                                            <button class="btn rounded-pill px-3 d-flex text-truncate gap-2 align-items-center"><i class="fa-solid fa-play"></i><span>Şimdi İzle</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                              <div class="carousel-item">
+                                                <div class="slider-item d-flex justify-content-center align-items-center py-3 px-5">
+                                                    <div class="col-4 d-flex justify-content-end ps-4">
+                                                        <img src="images/movie-1.jpg" id="slider-item-image" class="img-fluid rounded">
+                                                    </div>
+                                                    <div class="col-8 pe-5 px-4  d-flex gap-md-2 gap-1 flex-column">
+                                                        <div>
+                                                            <h3 class="text-light text-truncate" id="movie-title">Movie-Title</h3>
+                                                        </div>
+                                                        <div class="d-flex gap-3">
+                                                            <span class="text-light text-truncate" id="movie-year">movie-year</span>
+                                                            <span class="text-light text-truncate" id="movie-time">movie-time</span>
+                                                            <span class="text-light text-truncate" id="movie-rate">movie-rate</span>
+                                                        </div>
+                                                        <div>
+                                                            <p id="movie-subtitle">
+                                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae voluptatum sunt aperiam cum, omnis, nostrum id beatae asperiores temporibus, veritatis expedita ea repellat? Iste, in? Quidem eius odio ad dignissimos!
+                                                            </p>
+                                                        </div>
+                                                        <div class="watch-button-wrapper">
+                                                            <button class="btn rounded-pill px-3 d-flex gap-2 align-items-center"><i class="fa-solid fa-play"></i><span>Şimdi İzle</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                              <div class="carousel-item">
+                                                <div class="slider-item d-flex justify-content-center align-items-center py-3 px-5">
+                                                    <div class="col-4 d-flex justify-content-end ps-4">
+                                                        <img src="images/movie-1.jpg" id="slider-item-image" class="img-fluid rounded">
+                                                    </div>
+                                                    <div class="col-8 pe-5 px-4  d-flex gap-md-2 gap-1 flex-column">
+                                                        <div>
+                                                            <h3 class="text-light text-truncate" id="movie-title">Movie-Title</h3>
+                                                        </div>
+                                                        <div class="d-flex gap-3">
+                                                            <span class="text-light text-truncate" id="movie-year">movie-year</span>
+                                                            <span class="text-light text-truncate" id="movie-time">movie-time</span>
+                                                            <span class="text-light text-truncate" id="movie-rate">movie-rate</span>
+                                                        </div>
+                                                        <div>
+                                                            <p id="movie-subtitle">
+                                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae voluptatum sunt aperiam cum, omnis, nostrum id beatae asperiores temporibus, veritatis expedita ea repellat? Iste, in? Quidem eius odio ad dignissimos!
+                                                            </p>
+                                                        </div>
+                                                        <div class="watch-button-wrapper">
+                                                            <button class="btn rounded-pill px-3 d-flex gap-2 align-items-center"><i class="fa-solid fa-play"></i><span>Şimdi İzle</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <button class="carousel-control-prev pe-3" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next ps-3" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Movies Section -->
+                                <div class="row">
+
+                                    <!-- New Movies -->
+                                    <div class="new-movies-wrapper flex-column">
+                                        <div class="title d-flex justify-content-between align-items-center">
+                                            <h3 class="text-light m-0">New Movies</h3>
+                                            <button class="btn view-all d-flex gap-2 align-items-center"><span>View All</span><i class="fa-solid fa-angle-right"></i></button>
+                                        </div>
+                                        <div class="new-movies py-4 w-100 d-flex flex-wrap justify-content-center gap-3">
+                                            
+                                            <div class="movie-item" data-id="1">
+                                                <a href="#" class="text-decoration-none">
+                                                    <div class="movie-item-img">
+                                                        <img src="images/movie-1.jpg" class="img-fluid">
+                                                    </div>
+                                                    <div class="movie-item-title p-2 px-3">
+                                                        <h6 class="text-light" id="movie-name">
+                                                            Movie-Name
+                                                        </h6>
+                                                        <div class="d-flex gap-2 text-truncate">
+                                                            <span id="movie-date">movie-date</span>
+                                                            <span id="movie-time">movie-time</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="container-fluid mobile-menu-wrapper d-md-none animate__animated">
+            <div class="row mobile-menu px-0 py-3 m-0">
+                <div class="col-12">
+                    <div class="row p-0 m-0">
+                        <div class="logo col-6 col-sm-4 col-md-12 d-flex align-items-cente">
+                            <a href="#" class="d-flex">
+                                <img src="images/logo.png" alt="logo" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm-8 d-flex justify-content-end align-items-center d-md-none">
+                            <div class="mobile-menu-close-button d-flex align-items-center">
+                                <button class="btn">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex flex-column justify-content-center align-items-center py-5 gap-3 fs-3">
+                            <a href="#" class="navlink">Anasayfa</a>
+                            <a href="#" class="navlink">Yardım</a>
+                            <a href="#" class="navlink">Ayarlar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid movie-fs-player">
+            <div class="row m-0 p-0">
+                <div class="col-12 m-0 p-0">
+                    <div class="movie-close-section">
+                        <button class="btn bg-transparent animate__animated" id="movie-close">
+                            <i class="fa-solid fa-left-long"></i>
+                        </button>
+                    </div>
+                    <!-- <iframe src="https://vidmoxy.com/f/v1xd7fa3d6c" frameborder="0" id="movie-player">
+                      
+                    </iframe> -->
+                    <iframe id="movie-player" src="https://www.youtube.com/embed/ZeNyjnneq_w" title="How To Create The YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <!-- Jquery -->
+        <script src="js/jquery/jquery-3.6.1.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <!-- Custom JS -->
+        <script src="js/custom/custom.js"></script>
+    </body>
+</html>
