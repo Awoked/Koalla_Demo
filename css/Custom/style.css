@@ -280,7 +280,6 @@ background: linear-gradient(180deg, rgba(0,0,0,0.9752275910364145) 16%, rgba(0,0
 }
 @media screen and (max-width: 410px) {
     .carousel-wrapper{
-        display: flex;
         justify-content: center;
     }
     .slider-item, .carousel-item{
