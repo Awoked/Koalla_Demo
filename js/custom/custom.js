@@ -87,7 +87,6 @@ $(function () {
             $('#movie-close').removeClass('animate__fadeOutUp').hide();
         }, 800);
     }
-    fadeUpButton();
 
     $('.movie-close-section').on('mouseenter', function () {
         $('#movie-close').addClass('animate__fadeInDown').show();
