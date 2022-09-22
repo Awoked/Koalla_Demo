@@ -273,9 +273,8 @@ background: linear-gradient(180deg, rgba(0,0,0,0.9752275910364145) 16%, rgba(0,0
 }
 
 @media screen and (max-width: 375px) {
-    .movie-item,.movie-item-img{
-        padding: 0 1em;
-        width: 100%;
+    .movie-item, .movie-item-img{
+        width: 9em;
     }
     
 }

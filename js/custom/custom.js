@@ -44,7 +44,7 @@ $(function () {
                         </h6>
                         <div class="d-flex gap-2 text-truncate">
                             <span id="movie-date">${element.Tarih}</span>
-                            <span id="movie-time">${element.Sure} - dakika</span>
+                            <span id="movie-time" class="text-truncate">${element.Sure} - dakika</span>
                         </div>
                     </div>
                 </a>
