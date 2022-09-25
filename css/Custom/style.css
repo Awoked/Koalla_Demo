@@ -48,6 +48,9 @@ body{
     padding: 1em .8em;
     border-radius: 1em 0 0 1em;
 }
+.navlink:hover{
+    color: var(--main-color1);
+}
 .nav-link:hover{
     color: var(--main-color1);
     background-color: var(--secondary-color);
@@ -99,12 +102,13 @@ main.main-content{
 }
 .carousel-item{
     background: url(../../images/movie-1.jpg);
-    background-position-y: -150px;
     background-size: 100%;
     background-repeat: no-repeat;
     border-radius: 2em;
     transition: all .5s ease;
+    height: 100%;
 }
+
 .carousel-item img{
     max-height: 280px;
 }
@@ -260,6 +264,15 @@ background: linear-gradient(180deg, rgba(0,0,0,0.9752275910364145) 16%, rgba(0,0
         width: 100%;
         z-index: 5;
     }
+    .carousel-wrapper,
+    .slider-item{
+        max-height: 500px;
+        height: 500px;
+    }
+    .carousel-inner{
+        height: 100%;
+    }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -282,8 +295,6 @@ background: linear-gradient(180deg, rgba(0,0,0,0.9752275910364145) 16%, rgba(0,0
     .carousel-wrapper{
         justify-content: center;
     }
-    .slider-item, .carousel-item{
-        max-width: 340px;
-    }
+    
 }
 
