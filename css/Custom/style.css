@@ -179,8 +179,8 @@ main.main-content{
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     z-index: 999;
     background-color: #00000099;
     color: var(--white-color);
@@ -188,8 +188,8 @@ main.main-content{
     padding: 0;
 }
 #movie-player{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 .movie-close-section{
     position: fixed;

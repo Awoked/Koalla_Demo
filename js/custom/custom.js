@@ -116,22 +116,22 @@ $(function () {
 });
 
 
-const isMobile = navigator.userAgentData.mobile;
+// const isMobile = navigator.userAgentData.mobile;
 
-if (isMobile) {
-    if ($(window).width() < 520) {
-        $('#movie-player').css('height','90%');
-    } else if ($(window).width() > 520) {
-        $('#movie-player').css('height','80%');
-    }
-}
+// if (isMobile) {
+//     if ($(window).width() < 520) {
+//         $('#movie-player').css('height','90%');
+//     } else if ($(window).width() > 520) {
+//         $('#movie-player').css('height','80%');
+//     }
+// }
 
-$(window).resize(function () {
-    if (isMobile) {
-        if ($(window).width() > 520) {
-            $('#movie-player').css('height','80%');
-        } else if ($(window).width() < 520) {
-            $('#movie-player').css('height','90%');
-        }
-    }
-})
+// $(window).resize(function () {
+//     if (isMobile) {
+//         if ($(window).width() > 520) {
+//             $('#movie-player').css('height','80%');
+//         } else if ($(window).width() < 520) {
+//             $('#movie-player').css('height','90%');
+//         }
+//     }
+// })
