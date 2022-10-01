@@ -102,7 +102,6 @@ main.main-content{
     height: 100%;
 }
 .carousel-item{
-    background: url(../../images/movie-1.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     border-radius: 2em;
@@ -287,7 +286,7 @@ background: linear-gradient(180deg, rgba(0,0,0,0.9752275910364145) 16%, rgba(0,0
         height: 100%;
     }
     .carousel-item img{
-        max-height: 70vh;
+        min-height: 70vh;
     }
     .slider-item p,
     .slider-item span,
