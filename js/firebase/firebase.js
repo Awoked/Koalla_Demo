@@ -130,8 +130,54 @@ function getAllDataOnce() {
     })
 }
 
+
+
+
 getAllDataOnce();
 
 $(document).on('click', '#insert', insertData);
 $(document).on('click', '#update', UpdateData);
 $(document).on('click', '#remove', RemoveData);
+
+
+
+let movieContainer = $('.movie-fs-player');
+movieContainer.addClass('animate__animated');
+let customMovieShow = () => {
+    movieContainer.show().addClass('animate__zoomIn');
+    setTimeout(() => {
+            movieContainer.removeClass('animate__zoomIn');
+    }, 800);
+}
+let customMovieHide = () =>{
+    movieContainer.addClass('animate__backOutLeft');
+    setTimeout(() => {
+        movieContainer.removeClass('animate__backOutLeft').hide();
+    }, 500);
+}
+
+$(document).on('click', '.movie-item',function () {
+    let data_Id = this.getAttribute('data-id');
+    console.log(data_Id);
+    const dbRef = ref(db);
+    get(child(dbRef, "movies"))
+    .then((snapshot)=>{
+        let movies = [];
+        snapshot.forEach(childSnapshot =>{
+            movies.push(childSnapshot.val());
+        });
+        movies.forEach(movieItem =>{
+            if (data_Id == movieItem.ID) {
+                customMovieShow();
+                console.log(movieItem.link);
+                $('#movie-player').attr('src', movieItem.link);
+            }
+        })
+    });
+    
+});
+
+$('#movie-close').click(function () { 
+    customMovieHide();
+    $('#movie-player').removeAttr('src');
+});

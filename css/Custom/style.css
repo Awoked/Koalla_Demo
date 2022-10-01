@@ -190,7 +190,6 @@ main.main-content{
 #movie-player{
     width: 100vw;
     height: 100vh;
-    background-color: #ff000040;
 }
 .movie-close-section{
     position: fixed;
@@ -276,6 +275,7 @@ background: linear-gradient(180deg, rgba(0,0,0,0.9752275910364145) 16%, rgba(0,0
 .log-in:hover{
     opacity: .8;
 }
+
 
 @media screen and (min-width: 1400px) {
     .carousel-wrapper{

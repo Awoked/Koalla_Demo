@@ -40,48 +40,49 @@ $(function () {
     //     `);
     // });
 
-    let movieContainer = $('.movie-fs-player');
-    movieContainer.addClass('animate__animated');
-    let customMovieShow = () => {
-        movieContainer.show().addClass('animate__zoomIn');
-        setTimeout(() => {
-             movieContainer.removeClass('animate__zoomIn');
-        }, 800);
-    }
-    let customMovieHide = () =>{
-        movieContainer.addClass('animate__backOutLeft');
-        setTimeout(() => {
-            movieContainer.removeClass('animate__backOutLeft').hide();
-        }, 500);
-    }
+    // let movieContainer = $('.movie-fs-player');
+    // movieContainer.addClass('animate__animated');
+    // let customMovieShow = () => {
+    //     movieContainer.show().addClass('animate__zoomIn');
+    //     setTimeout(() => {
+    //          movieContainer.removeClass('animate__zoomIn');
+    //     }, 800);
+    // }
+    // let customMovieHide = () =>{
+    //     movieContainer.addClass('animate__backOutLeft');
+    //     setTimeout(() => {
+    //         movieContainer.removeClass('animate__backOutLeft').hide();
+    //     }, 500);
+    // }
 
     // bir filme tıklandığında film oynatma kısmını aç
-    $('.movie-item').click(function () {
-        let data_Id = this.getAttribute('data-id');
-        movieItems.forEach(element => {
-            if (data_Id == element.Id) {
-               customMovieShow();
+    // $('.movie-item').click(function () {
+    //     let data_Id = this.getAttribute('data-id');
+    //     movieItems.forEach(element => {
+    //         if (data_Id == element.Id) {
+    //            customMovieShow();
                
-            }
-        });
+    //         }
+    //     });
         
-    });
+    // });
     
     // filmi kapatma buttonunu gizle
     function fadeUpButton() {
         $('.movie-close-section').css('background','none');
         $('#movie-close').addClass('animate__fadeOutUp');
-        setTimeout(() => {
             $('#movie-close').removeClass('animate__fadeOutUp').hide();
-        }, 800);
     }
-    fadeUpButton();
     
+    $(document).on('click', '.movie-item',function (){
+        setTimeout(() => {
+            fadeUpButton();
+        }, 6000);
+    });
+
     $('.movie-close-section').on('mouseenter', function () {
         $('#movie-close').addClass('animate__fadeInDown').show();
-        setTimeout(() => {
             $('#movie-close').removeClass('animate__fadeInDown');    
-        }, 800);
         $('.movie-close-section').removeAttr('style');
     });
 
@@ -93,9 +94,9 @@ $(function () {
     
     
 
-    $('#movie-close').click(function () { 
-        customMovieHide();
-    });
+    // $('#movie-close').click(function () { 
+    //     customMovieHide();
+    // });
 
     $('.mobile-menu-button').click(function () { 
         $('.mobile-menu-wrapper').show().addClass('animate__fadeInDown');
