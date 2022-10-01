@@ -114,3 +114,14 @@ $(function () {
 
     
 });
+
+
+const isMobile = navigator.userAgentData.mobile;
+
+if (isMobile) {
+    console.log("mobil cihaz");
+    $('#movie-player').css('height','80%');
+}
+else{
+    console.log("pc");
+}
