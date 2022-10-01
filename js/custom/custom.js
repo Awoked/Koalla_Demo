@@ -1,16 +1,3 @@
-let movieItems =[
-    {
-        "Id":2,
-        "Baslik":"Avatar",
-        "Aciklama":"Avatar filmi 18 Aralık 2009 tarihinde izleyicilere sunulmuş aksiyon, \nfantastik ve macera unsurlarıyla dopdolu mükemmel  bir filmdir.",
-        "Puan":7.8,
-        "Sure":162,
-        "Tarih": 2009,
-        "Adres":"https://vidmoxy.com/f/v1xd7fa3d6c",
-        "Resim":"https://upload.wikimedia.org/wikipedia/tr/1/12/Avatar-Film-Posteri.jpg"
-     }
-]
-
 $(function () {
     
     let screenSize = $(window).width();
@@ -25,32 +12,33 @@ $(function () {
     animations('.search-bar',600,300,' animate__backInDown');
     animations('.carousel-wrapper',1200,300,'animate__backInLeft');
     animations('.new-movies-wrapper',1800,300,'animate__backInLeft');
+    animations('.footer',2400,300,'animate__backInLeft');
     
     if (screenSize <= 768) {
         animations('.navbar',300,null,'animate__fadeInDown');
     } else {
         $('.navbar').show().css('display','flex').addClass('animate__animated animate__fadeInLeftBig')
     }
-    movieItems.forEach(element => {
-        $('.new-movies').append(`
-            <div class="movie-item" data-id="${element.Id}">
-                <a href="#" class="text-decoration-none">
-                    <div class="movie-item-img">
-                        <img src="${element.Resim}" class="img-fluid">
-                    </div>
-                    <div class="movie-item-title p-2 px-3">
-                        <h6 class="text-light" id="movie-name">
-                            ${element.Baslik}
-                        </h6>
-                        <div class="d-flex gap-2 text-truncate">
-                            <span id="movie-date">${element.Tarih}</span>
-                            <span id="movie-time" class="text-truncate">${element.Sure} - dakika</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        `);
-    });
+    // movieItems.forEach(element => {
+    //     $('.new-movies').append(`
+    //         <div class="movie-item" data-id="${element.Id}">
+    //             <a href="#" class="text-decoration-none">
+    //                 <div class="movie-item-img">
+    //                     <img src="${element.Resim}" class="img-fluid">
+    //                 </div>
+    //                 <div class="movie-item-title p-2 px-3">
+    //                     <h6 class="text-light text-truncate" id="movie-name">
+    //                         ${element.Baslik}
+    //                     </h6>
+    //                     <div class="d-flex gap-2 text-truncate">
+    //                         <span id="movie-date">${element.Tarih}</span>
+    //                         <span id="movie-time" class="text-truncate">${element.Sure} - dakika</span>
+    //                     </div>
+    //                 </div>
+    //             </a>
+    //         </div>
+    //     `);
+    // });
 
     let movieContainer = $('.movie-fs-player');
     movieContainer.addClass('animate__animated');
@@ -123,4 +111,5 @@ $(function () {
         }, 700);
     });
 
+    
 });

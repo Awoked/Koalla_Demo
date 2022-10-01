@@ -55,9 +55,12 @@
                         </div>
                         <!-- general -->
                         <div class="row general w-100 d-none d-md-flex">
-                            <div class="col-12  d-flex flex-column gap-1 p-0">
+                            <div class="col-12 general-inner d-flex flex-column gap-1 p-0">
                                 <div class="px-3">
                                     <h4 class="text-light">Genel</h4>
+                                </div>
+                                <div class="d-flex nav-link-wrapper w-100 justify-content-center">
+                                    <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" class="nav-link d-flex align-items-baseline gap-2"><i class="fa-regular fa-user"></i><span>Giriş Yap</span></a>
                                 </div>
                                 <div class="d-flex nav-link-wrapper w-100 justify-content-center">
                                     <a href="#" class="nav-link d-flex align-items-baseline gap-2"><i class="fa-regular fa-circle-question"></i><span>Yardım</span></a>
@@ -65,10 +68,46 @@
                                 <div class="d-flex nav-link-wrapper w-100 justify-content-center">
                                     <a href="#" class="nav-link d-flex align-items-baseline gap-2"><i class="fa-solid fa-gear"></i><span>Ayarlar</span></a>
                                 </div>
+                                <div class="admin-panel-link-wrapper">
+
+                                </div>
                             </div>
                         </div>
                     </nav>
                 </div>
+
+                <!-- login -->
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="loginModalLabel">Giriş Yap</h5>
+                          <i class="fa-solid fa-x" type="button" data-bs-dismiss="modal" aria-label="Close"></i>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-column gap-3">
+                                <div>
+                                    <label for="userName"><h6>Kullanıcı Adı</h6></label>
+                                    <input type="text" class="form-control" id="userName" name="userName">
+                                </div>
+                                <div>
+                                    <label for="password"><h6>Şifre</h6></label>
+                                    <input type="password" class="form-control" id="password" name="password">
+                                </div>
+                                <div>
+                                    <span class="login-status"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                          <button type="button" class="btn btn-primary log-in">Giriş Yap</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
                 <div class="col-12 col-md-10 col-xxl-11 main-wrapper p-0 overflow-scroll ">
                     <!-- Main content -->
                     <main class="main-content container-fluid p-0 py-3 m-0 ">
@@ -89,10 +128,10 @@
                                             <div class="carousel-inner">
                                               <div class="carousel-item active">
                                                 <div class="slider-item d-flex flex-column flex-md-row justify-content-md-center align-items-center gap-3 gap-md-0 py-3 px-5">
-                                                    <div class="col-12 col-md-4 justify-content-center d-flex justify-content-md-end ps-md-4">
+                                                    <div class="col-12 col-md-4 col-xxl-5 justify-content-center d-flex justify-content-md-end ps-md-4">
                                                         <img src="images/movie-1.jpg" id="slider-item-image" class="img-fluid rounded">
                                                     </div>
-                                                    <div class="col-12 col-md-8 pe-md-5 px-md-4 justify-content-center justify-content-md-center  d-flex gap-md-2 gap-1 flex-column">
+                                                    <div class="col-12 col-md-8 pe-md-5 col-xxl-7 px-md-4 justify-content-center justify-content-md-center  d-flex gap-md-2 gap-1 flex-column">
                                                         <div class="d-flex">
                                                             <h3 class="text-light text-truncate" id="movie-title">Movie-Title</h3>
                                                         </div>
@@ -205,6 +244,36 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <!-- Footer -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <footer class="footer flex-column text-light">
+                                            <div class="footer-inner d-flex justify-content-between">
+                                                <div class="footer-title d-flex gap-2 flex-column">
+                                                    <div class="logo">
+                                                        <img src="images/logo.png" class="d-block img-fluid" alt="logo">
+                                                    </div>
+                                                    <div class="short-about-us">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident velit, dicta quas quidem explicabo doloribus.
+                                                    </div>
+                                                </div>
+                                                <div class="quick-links d-flex flex-column">
+                                                    <h3>Quick Links</h3>
+                                                    <a href="#">Ana Sayfa</a>
+                                                    <a href="#">Ana Sayfa</a>
+                                                    <a href="#">Ana Sayfa</a>
+                                                </div>
+                                                
+                                                <div>s</div>
+                                            </div>
+                                            <div class="copy align-self-end">
+                                                <span>Koalla &copy; Tüm Hakları Saklıdır</span>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </main>
@@ -230,15 +299,22 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 d-flex flex-column justify-content-center align-items-center py-5 gap-3 fs-3">
+                        <div class="col-12 mobile-menu-links d-flex flex-column justify-content-center align-items-center py-5 gap-3 fs-3">
                             <a href="#" class="navlink">Anasayfa</a>
+                            <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" class="navlink">Giriş Yap</a>
                             <a href="#" class="navlink">Yardım</a>
                             <a href="#" class="navlink">Ayarlar</a>
+                            <div class="admin-panel-mobile-link-wrapper">
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        
+
 
         <div class="container-fluid movie-fs-player">
             <div class="row m-0 p-0">
@@ -251,11 +327,14 @@
                     <!-- <iframe src="https://vidmoxy.com/f/v1xd7fa3d6c" frameborder="0" id="movie-player">
                       
                     </iframe> -->
-                    <iframe id="movie-player" src="https://www.youtube.com/embed/ZeNyjnneq_w" title="How To Create The YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <iframe id="movie-player" src="https://www.youtube.com/embed/ZeNyjnneq_w" title="How To Create The YouTube Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     
                 </div>
             </div>
         </div>
+        
+        <!-- admin panel -->
+        <div class="admin-panel-wrapper"></div>
 
         <!-- Scripts -->
         <!-- Jquery -->
@@ -263,6 +342,9 @@
         <!-- Bootstrap -->
         <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
         <script src="js/bootstrap/bootstrap.min.js"></script>
+        <!-- data -->
+        <script src="js/logInForm/loginform.js"></script>
+        <script type="module" src="js/firebase/firebase.js"></script>
         <!-- Custom JS -->
         <script src="js/custom/custom.js"></script>
     </body>
